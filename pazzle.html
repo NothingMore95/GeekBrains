@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Игра в Загадки</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		
+	var score = 0
+	
+	function checkAnswer(){
+	
+	var userAnswer = document.getElementById("userAnswer1").value;
+
+	if(userAnswer == "разговор"){
+		score++;
+	}
+	userAnswer = document.getElementById("userAnswer2").value;
+	userAnswer = userAnswer.toLowerCase();
+	if(userAnswer == "сухих"){
+		score++;
+	}
+	userAnswer = document.getElementById("userAnswer3").value;
+	userAnswer = userAnswer.toLowerCase();
+	if(userAnswer == "в земле" || userAnswer == "под землёй"){
+		score++;
+	}
+	userAnswer = document.getElementById("userAnswer4").value;
+	userAnswer = userAnswer.toLowerCase();
+	if(userAnswer == "эхо"){
+		score++;
+	}
+	userAnswer = document.getElementById("userAnswer5").value;
+	userAnswer = userAnswer.toLowerCase();
+	if(userAnswer == "мягким знаком"){
+		score++;
+	}
+	userAnswer = document.getElementById("userAnswer6").value;
+	userAnswer = userAnswer.toLowerCase();
+	if(userAnswer == "на карте" || userAnswer == "на географической карте"){
+		score++;
+	}
+	userAnswer = document.getElementById("userAnswer7").value;
+	userAnswer = userAnswer.toLowerCase();
+	if(userAnswer == "шахматный" || userAnswer == "мёртвый" || userAnswer== "игрушечный"){
+		score++;
+	}
+alert("Всего угадано: " + score + " загадок.")
+	
+}
+
+</script>
+</head>
+<body class="phon"> 
+	<div class="headers">
+	<a href="index.html">Главная</a>
+	<a href="pazzle.html">Загадки</a>
+	<a href="quess.html">Угадайка</a>
+	<a href="musikopy.html">Моя музыка</a>
+</div>
+
+<div class="puzzle">
+<h1>Игра в загадки</h1>
+</div>
+
+<div class="box">
+
+<br>
+<br>
+<h3><p>Завязать можно, а развязать нельзя.Что это такое?</p>
+	<input type="text" id="userAnswer1">
+
+	<p>Каких камней не бывает в речке?</p>
+	<input type="text" id="userAnswer2">
+
+	<p>Где впервые был обнаружен картофель?</p>
+	<input type="text" id="userAnswer3">
+
+	<p>Не живое, а на всех языках говорит.Что это?</p>
+	<input type="text" id="userAnswer4">
+
+	<p>Чем кончаются как день,так и ночь?</p>
+	<input type="text" id="userAnswer5">
+
+	<p>Где находятся города без домов, реки без воды,а леса без деревьев?</p>
+	<input type="text" id="userAnswer6">
+
+	<p>Какой конь не ест овса?</p>
+	<input type="text" id="userAnswer7">
+</h3>
+
+<div class="button13">
+<br>
+<a href="#" onClick="checkAnswer();">Ответить</a>
+</div>
+<br>
+
+
+
+
+</div>
+
+<br>
+<div class="footer">
+Copyright &copy;Gorchkhanov
+</div>
+
+
+</body>
+</html>

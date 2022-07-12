@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="h">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Игра Угадайка</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript">
+		
+	var answer = parseInt(Math.random() * 100);	
+	var tryCount = 0;
+	var MaxtryCount = 5;
+		
+
+	function hide(id){
+		document.getElementById(id).style.display = "none"
+	}
+		function readInt(){
+			var number = document.getElementById("userAnswer").value
+			return parseInt(number);
+		}
+
+		function write(text){
+			document.getElementById("info").innerHTML = text;
+		}
+
+		function quess(){
+			tryCount++;
+			var userAnswer = readInt();
+			if(userAnswer == answer){
+				write("Поздравляю!Вы угадали")
+				hide("userAnswer");
+				hide("Button");
+			}else if(tryCount >= MaxtryCount){
+				write("Вы проиграли!Правильный ответ: " + answer)
+				hide("userAnswer");
+				hide("Button");
+			}else if(userAnswer > answer){
+				write("Вы ввели слишком большое число.Попробуйте ещё раз!");
+			}else if(userAnswer < answer){
+				write("Вы ввели слишком маленькое число.Попробуйте ещё раз!")
+			}
+			
+		}
+			
+
+
+	</script>
+</head>
+<body class="fon"> 
+
+
+<div class="headers">
+	<a href="index.html">Главная</a>
+	<a href="pazzle.html">Загадки</a>
+	<a href="quess.html">Угадайка</a>
+	<a href="musikopy.html">Моя музыка</a>
+</div>
+
+<div class="puzzle">
+<h1>Игра Угадайка</h1>
+</div>
+
+<div class="buton44">
+<h2><p id="info"><i>Угадайте число от 1 до 100<i><br>У вас 5 попыток</p></h2>
+<input type="text" id="userAnswer">
+</div>
+
+<div class="button25">
+<br>	
+<a href="#" onClick="quess()" id="Button">Начать</a>
+</div>
+<br>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="footer">
+Copyright &copy;Gorchkhanov
+</div>
+</body>
+</html>
